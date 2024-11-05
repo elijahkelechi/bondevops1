@@ -17,9 +17,6 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-3">
-              Quick Links
-            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#home" className="text-gray-400 hover:text-white">
