@@ -1,7 +1,7 @@
 import React from "react";
-
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import img from "../assets/myhero.svg";
+import profile from "../assets/profile.jpg"; // Add your profile image path
 
 const Hero = () => {
   document.addEventListener("scroll", function () {
@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className=" relative w-full h-screen overflow-hidden sm:overflow-hidden"
+      className="relative w-full h-screen overflow-hidden sm:overflow-hidden"
     >
       <video
         src="/bgvideo.mp4"
@@ -36,59 +36,53 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        alt="bcg video"
+        alt="background video"
       />
-      <div
-        className="select-none relative z-10 flex-row items-center
-       justify-start text-left h-auto py-40 px-8 md:16 sm:px-12 box-border
-       md:grid-cols-2"
-      >
+      <div className="select-none relative z-10 flex-row items-center justify-start text-left h-auto py-40 px-8 md:16 sm:px-12 box-border md:grid-cols-2">
+        {/* Profile Image */}
+        <img
+          src={profile}
+          alt="Profile"
+          className="rounded-full w-24 h-24 mb-4 sm:w-32 sm:h-32 border-4 border-emerald-500 shadow-lg"
+        />
+
         <h1 className="text-white sm:tracking-wide md:tracking-widest sm:text-5xl text-4xl sm:font-bold font-semibold ">
           <span>Bringing Your Dream</span>
-          <span className="md:block block  "> </span>
+          <span className="md:block block"> </span>
           <span className="md:block block"> </span>
           <span className="sm:block">Website to Reality</span>
           <span className="md:block sm:block"> </span>
         </h1>
         <section className="h-auto md:max-w-md max-h-screen ">
-          <div className="md:pt-8 pb-6 py-2  pr-10 ">
-            <p className=" text-slate-50 font-medium text-sm md:text-xl sm:text-wrap overflow-hidden">
+          <div className="md:pt-8 pb-6 py-2 pr-10">
+            <p className="text-slate-50 font-medium text-sm md:text-xl sm:text-wrap overflow-hidden">
               Explore our portfolio to see how we bring your vision to life with
               web development and DevOps solutions.
             </p>
           </div>
         </section>
+
         <div className="icons flex gap-x-4">
           <a target="_blank" href="https://github.com/elijahkelechi/">
-            <FaGithubSquare
-              className="text-4xl md:text-4xl text-emerald-500
-            hover:text-emerald-300 duration-200"
-            />
+            <FaGithubSquare className="text-4xl md:text-4xl text-emerald-500 hover:text-emerald-300 duration-200" />
           </a>
           <a
             target="blank"
             href="https://ng.linkedin.com/in/thankgod-nwankwo-85267a296"
           >
-            <FaLinkedin
-              className="text-4xl md:text-4xl text-emerald-500
-             hover:text-emerald-300 duration-200"
-            />
+            <FaLinkedin className="text-4xl md:text-4xl text-emerald-500 hover:text-emerald-300 duration-200" />
           </a>
           <a
             target="_blank"
             href="https://x.com/boncodes?t=g8jlD87b6ByfFRVJ14Zy9A&s=08"
           >
-            <FaTwitterSquare
-              className="text-4xl md:text-4xl text-emerald-500
-             hover:text-emerald-300 duration-200"
-            />
+            <FaTwitterSquare className="text-4xl md:text-4xl text-emerald-500 hover:text-emerald-300 duration-200" />
           </a>
         </div>
 
         <div
           id="myElement"
-          className="hidden md:flex fixed top-40 right-10
-         text-white p-4 transition-opacity duration-300 overflow-hidden"
+          className="hidden md:flex fixed top-40 right-10 text-white p-4 transition-opacity duration-300 overflow-hidden"
         >
           <img src={img} alt="Hero image" className="h-80 overflow-hidden" />
         </div>
